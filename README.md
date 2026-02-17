@@ -6,7 +6,7 @@ Tenzies is a single-player dice game built in React as a personal project to sha
 
 ## 🔗 Live Demo
 
-[View it live]
+[View it live](https://tenzies-baronjada.netlify.app/)
 
 ## 📖 About
 
