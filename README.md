@@ -28,10 +28,10 @@ The goal is simple - roll 10 dice and hold the ones you want to keep, rerolling 
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/baronjada/tenzies-game
 
 # Navigate into the project
-cd your-repo
+cd tenzies-game
 
 # Install dependencies
 npm install
