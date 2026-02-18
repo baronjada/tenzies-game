@@ -58,12 +58,39 @@ button:hover {
   gap: 26px;
 }
 
+@keyframes Shake {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  25% {
+    transform: rotate(-6deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  75% {
+    transform: rotate(-6deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
 button.die-button {
   height: 74px;
   width: 74px;
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 40px;
   background-color: white;
+  animation: Shake 0.5s linear infinite;
+}
+
+button.die-button:hover {
+  animation: none;
 }
 
 button.roll-dice-button {
