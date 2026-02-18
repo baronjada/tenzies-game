@@ -104,3 +104,9 @@ button.roll-dice-button {
 button.roll-dice-button:hover {
   background-color: #7560fa;
 }
+
+button.held-dice {
+  background-color: #59e391;
+  animation: none;
+  transform: none;
+}

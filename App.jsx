@@ -13,14 +13,14 @@ export default function App() {
       newDiceArr.push({
         id: nanoid(),
         value: randomNum,
-        isHeld: false,
+        isHeld: true,
       });
     }
     return newDiceArr;
   }
 
   const diceElements = dice.map((dieObj) => {
-    return <Die key={dieObj.id} value={dieObj.value} />;
+    return <Die key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld} />;
   });
 
   function rollDice() {
