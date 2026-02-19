@@ -30,7 +30,17 @@ main {
   justify-content: center;
   align-items: center;
   padding: 60px;
-  row-gap: 52px;
+  row-gap: 34px;
+}
+
+main h1 {
+  font-size: 44px;
+}
+
+main p {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 300;
 }
 
 button {
