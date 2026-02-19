@@ -13,18 +13,29 @@ export default function App() {
       newDiceArr.push({
         id: nanoid(),
         value: randomNum,
-        isHeld: true,
+        isHeld: false,
       });
     }
     return newDiceArr;
   }
 
   const diceElements = dice.map((dieObj) => {
-    return <Die key={dieObj.id} value={dieObj.value} isHeld={dieObj.isHeld} />;
+    return (
+      <Die
+        key={dieObj.id}
+        value={dieObj.value}
+        isHeld={dieObj.isHeld}
+        hold={() => hold(dieObj.id)}
+      />
+    );
   });
 
   function rollDice() {
     setDice(generateAllNewDice);
+  }
+
+  function hold(id) {
+    console.log(id);
   }
 
   return (
