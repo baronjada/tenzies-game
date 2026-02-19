@@ -13,7 +13,7 @@ export default function App() {
   );
 
   const message = gameWon
-    ? "Wanna play again? Click below to have another game."
+    ? `Wanna play again? Click "New Game" to have another go.`
     : "Roll until all dice are the same. Click each die to freeze it at its current value between rolls.";
 
   function generateAllNewDice() {
@@ -64,7 +64,7 @@ export default function App() {
 
   return (
     <main>
-      <h1>{gameWon ? "You smashed it!" : "Tenzies"}</h1>
+      <h1>{gameWon ? "Congrats, you won!" : "Tenzies"}</h1>
       <p>{message}</p>
       <div className="dice-container">{diceElements}</div>
       <button onClick={rollDice} className="roll-dice-button">

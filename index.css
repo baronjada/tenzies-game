@@ -120,3 +120,32 @@ button.held-dice {
   animation: none;
   transform: none;
 }
+
+@media (max-width: 800px) {
+  main {
+    row-gap: 24px;
+  }
+
+  main h1 {
+    font-size: 30px;
+  }
+
+  main p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  button.die-button {
+    height: 54px;
+    width: 54px;
+    font-size: 28px;
+  }
+
+  .dice-container {
+    gap: 18px;
+  }
+
+  button.roll-dice-button {
+    font-size: 18px;
+  }
+}
