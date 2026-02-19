@@ -31,7 +31,13 @@ export default function App() {
   });
 
   function rollDice() {
-    setDice(generateAllNewDice);
+    setDice((prevDice) => {
+      return prevDice.map((item) => {
+        return item.isHeld === false
+          ? { ...item, value: Math.ceil(Math.random() * 6) }
+          : item;
+      });
+    });
   }
 
   function holdDice(id) {
