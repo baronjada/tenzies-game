@@ -35,7 +35,11 @@ export default function App() {
   }
 
   function hold(id) {
-    console.log(id);
+    setDice((prevDice) =>
+      prevDice.map((item) =>
+        item.id === id ? { ...item, isHeld: !item.isHeld } : item,
+      ),
+    );
   }
 
   return (
