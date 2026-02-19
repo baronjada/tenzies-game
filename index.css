@@ -5,12 +5,13 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #0b2434;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  text-align: center;
 }
 
 div#root {
@@ -39,7 +40,6 @@ main h1 {
 
 main p {
   font-size: 22px;
-  text-align: center;
   font-weight: 300;
 }
 

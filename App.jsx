@@ -12,6 +12,10 @@ export default function App() {
     (die) => die.isHeld && die.value === firstDieValue,
   );
 
+  const message = gameWon
+    ? "Wanna play again? Click below to have another game."
+    : "Roll until all dice are the same. Click each die to freeze it at its current value between rolls.";
+
   function generateAllNewDice() {
     const newDiceArr = [];
     for (let i = 0; i < 10; i++) {
@@ -37,13 +41,17 @@ export default function App() {
   });
 
   function rollDice() {
-    setDice((prevDice) => {
-      return prevDice.map((item) => {
-        return item.isHeld === false
-          ? { ...item, value: Math.ceil(Math.random() * 6) }
-          : item;
+    if (gameWon) {
+      setDice(generateAllNewDice());
+    } else {
+      setDice((prevDice) => {
+        return prevDice.map((item) => {
+          return item.isHeld === false
+            ? { ...item, value: Math.ceil(Math.random() * 6) }
+            : item;
+        });
       });
-    });
+    }
   }
 
   function holdDice(id) {
@@ -56,11 +64,8 @@ export default function App() {
 
   return (
     <main>
-      <h1>Tenzies</h1>
-      <p>
-        Roll until all dice are the same. Click each die to freeze it at its
-        current value between rolls.
-      </p>
+      <h1>{gameWon ? "You smashed it!" : "Tenzies"}</h1>
+      <p>{message}</p>
       <div className="dice-container">{diceElements}</div>
       <button onClick={rollDice} className="roll-dice-button">
         {gameWon ? "New Game" : "Roll"}
