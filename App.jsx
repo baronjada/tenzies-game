@@ -25,7 +25,7 @@ export default function App() {
         key={dieObj.id}
         value={dieObj.value}
         isHeld={dieObj.isHeld}
-        hold={() => hold(dieObj.id)}
+        hold={() => holdDice(dieObj.id)}
       />
     );
   });
@@ -34,7 +34,7 @@ export default function App() {
     setDice(generateAllNewDice);
   }
 
-  function hold(id) {
+  function holdDice(id) {
     setDice((prevDice) =>
       prevDice.map((item) =>
         item.id === id ? { ...item, isHeld: !item.isHeld } : item,
