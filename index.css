@@ -127,6 +127,11 @@ button.held-dice {
   transform: none;
 }
 
+.roll-dice-button:focus {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
 @media (max-width: 800px) {
   main {
     row-gap: 24px;
