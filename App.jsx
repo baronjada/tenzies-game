@@ -6,6 +6,12 @@ import Die from "./components/Die";
 export default function App() {
   const [dice, setDice] = useState(generateAllNewDice);
 
+  const firstDieValue = dice[0].value;
+
+  const gameWon = dice.every(
+    (die) => die.isHeld && die.value === firstDieValue,
+  );
+
   function generateAllNewDice() {
     const newDiceArr = [];
     for (let i = 0; i < 10; i++) {
@@ -53,11 +59,11 @@ export default function App() {
       <h1>Tenzies</h1>
       <p>
         Roll until all dice are the same. Click each die to freeze it at its
-        current number between rolls.
+        current value between rolls.
       </p>
       <div className="dice-container">{diceElements}</div>
       <button onClick={rollDice} className="roll-dice-button">
-        Roll
+        {gameWon ? "New Game" : "Roll"}
       </button>
     </main>
   );
