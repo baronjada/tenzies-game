@@ -45,18 +45,20 @@ The app will be running at `http://localhost:5173` (or the port shown in your te
 
 ## 📁 Project Structure
 
+```
 tenzies-game/
 ├── assets/
-│ └── tenzies-live-demo.gif # Gameplay demo recording
+│   └── tenzies-live-demo.gif  # Gameplay demo recording
 ├── components/
-│ └── Die.jsx # Individual die component — handles display and hold state styling
-├── App.jsx # Main game logic — state management, roll/hold/win logic
-├── index.jsx # Entry point — renders App to the DOM
-├── index.css # Global styles — game board layout, die styling, responsive design
-├── index.html # HTML shell
-├── vite.config.js # Vite configuration
-├── eslint.config.js # Linting rules
-└── package.json # Dependencies and scripts
+│   └── Die.jsx                # Individual die component — handles display and hold state styling
+├── App.jsx                    # Main game logic — state management, roll/hold/win logic
+├── index.jsx                  # Entry point — renders App to the DOM
+├── index.css                  # Global styles — game board layout, die styling, responsive design
+├── index.html                 # HTML shell
+├── vite.config.js             # Vite configuration
+├── eslint.config.js           # Linting rules
+└── package.json               # Dependencies and scripts
+```
 
 ## 🧠 What I Learned
 
